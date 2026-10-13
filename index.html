@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>א.י.א גיוס והשמה</title>
+<link rel="canonical" href="https://aia-jobs.co.il/">
+<meta property="og:title" content="א.י.א גיוס והשמה — משרות פתוחות">
+<meta property="og:description" content="משרות פתוחות בכל הארץ. מחפשים משרה ושולחים הודעה בוואטסאפ.">
+<meta property="og:image" content="https://aia-jobs.co.il/hero.webp">
+<link rel="icon" href="logo.webp">
+<meta name="description" content="א.י.א גיוס והשמה — משרות פתוחות בכל הארץ. מחפשים משרה ושולחים הודעה בוואטסאפ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&family=Heebo:wght@400;500;600&display=swap">
+<style>
+/* Layout: category-leader pattern (full-bleed person photo + job search panel), done in AIA blue,
+   with WhatsApp as the one thing the big agencies don't offer. Deliberate single light look. */
+:root{
+  color-scheme:light;
+  --ink:#0b1f3a; --grey:#56627a; --line:#e2e8f1; --soft:#f2f6fb; --white:#ffffff;
+  --blue:#1468b8; --blue-d:#0d4a8a; --blue-l:#e6f0fb;
+  --wa:#1faa59; --wa-d:#168a47;
+  --display:"Rubik","Heebo",system-ui,sans-serif;
+  --body:"Heebo","Rubik",system-ui,"Segoe UI",Arial,sans-serif;
+  --r:14px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--white)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--white);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:20px}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.num{font-variant-numeric:tabular-nums}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:#fff;box-shadow:0 1px 0 var(--line)}
+.hd{display:flex;align-items:center;gap:20px;padding-block:8px}
+.brand{display:flex;align-items:center;text-decoration:none;margin-inline-end:auto}
+.brand img{height:54px;width:auto}
+.nav{display:flex;gap:24px;font-weight:500;font-size:.95rem}
+.nav a{text-decoration:none}.nav a:hover{color:var(--blue)}
+.langs{display:flex;gap:2px;border:1px solid var(--line);border-radius:8px;padding:2px}
+.langs button{border:0;background:none;color:var(--grey);font:600 .78rem var(--body);padding:5px 8px;border-radius:6px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font:600 1rem var(--body);text-decoration:none;padding:14px 24px;border:0;border-radius:10px;cursor:pointer;white-space:nowrap;transition:background .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-wa{background:var(--wa);color:#fff}.btn-wa:hover{background:var(--wa-d)}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.btn-line{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.seg{display:flex;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px}
+.seg a{padding:7px 14px;border-radius:8px;font-weight:600;font-size:.88rem;text-decoration:none;color:var(--grey);white-space:nowrap}
+.seg a[aria-current="true"]{background:var(--ink);color:#fff}
+@media (max-width:620px){.hd{flex-wrap:wrap;row-gap:8px}.seg{order:10;flex-basis:100%;justify-content:stretch}.seg a{flex:1;text-align:center;padding:9px 8px}}
+.emp-link{font-weight:600;color:#fff;background:var(--ink);padding:9px 16px;border-radius:8px;text-decoration:none;font-size:.9rem}
+.hd .btn{padding:9px 14px;font-size:.88rem}
+@media (max-width:960px){.nav{display:none}}
+@media (max-width:620px){.emp-link{display:none}.hd .btn span{display:none}.hd .btn{padding:9px}.brand img{height:46px}}
+
+/* hero */
+.hero{position:relative;color:#fff;background:#0b1f3a}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(9,28,56,.94) 0%,rgba(9,28,56,.82) 42%,rgba(9,28,56,.25) 75%,rgba(9,28,56,.1) 100%)}
+[dir="ltr"] .hero::after{background:linear-gradient(90deg,rgba(9,28,56,.94) 0%,rgba(9,28,56,.82) 42%,rgba(9,28,56,.25) 75%,rgba(9,28,56,.1) 100%)}
+.hero .wrap{position:relative;z-index:1;padding-block:70px 90px}
+.hero-in{max-width:620px}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:500}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:#45d483}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.08;margin:.45em 0 .35em;text-wrap:balance}
+h1 em{font-style:normal;color:#7cc0ff}
+.lead{font-size:1.12rem;color:#d6e3f3;margin:0 0 28px;max-width:46ch}
+.search{background:#fff;color:var(--ink);border-radius:16px;padding:10px;display:grid;grid-template-columns:1.3fr 1fr auto;gap:8px;box-shadow:0 24px 50px -20px rgba(0,0,0,.55)}
+.search label{display:flex;flex-direction:column;padding:6px 12px;border-radius:10px;background:var(--soft);min-width:0}
+.search label span{font-size:.72rem;font-weight:600;color:var(--grey)}
+.search input,.search select{border:0;background:transparent;font:500 1rem var(--body);color:var(--ink);padding:2px 0;outline:none;width:100%;min-width:0}
+.search .btn{padding:0 26px}
+.or{margin-top:16px;font-size:.95rem;color:#d6e3f3;display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.or a{color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:6px;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}
+.or svg{width:18px;height:18px;color:#45d483}
+@media (max-width:760px){.search{grid-template-columns:1fr}.search .btn{padding:14px}.hero .wrap{padding-block:44px 60px}.hero::after{background:linear-gradient(0deg,rgba(9,28,56,.95) 0%,rgba(9,28,56,.85) 60%,rgba(9,28,56,.55) 100%)!important}}
+
+.hint{margin-top:12px;border:0;background:#fff;color:var(--blue);font:700 1rem var(--body);padding:10px 16px;border-radius:10px;cursor:pointer;box-shadow:0 10px 24px -14px rgba(0,0,0,.6)}
+.note{margin:0;padding:12px 16px;border-radius:10px;background:#fff6e0;color:#6b4a00;font-weight:500}
+/* trust strip */
+.trust{background:var(--blue);color:#fff}
+.trust ul{list-style:none;margin-block:0;margin-inline:auto;padding-block:18px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.trust li{display:flex;align-items:center;gap:12px;font-weight:500;font-size:.95rem}
+.trust b{font-family:var(--display);font-size:1.5rem;font-weight:800}
+.trust svg{width:28px;height:28px;flex:none;opacity:.9}
+@media (max-width:860px){.trust ul{grid-template-columns:1fr 1fr}.trust li{flex-direction:column;align-items:flex-start;gap:2px;font-size:.88rem}}
+
+section{padding-block:70px}
+section[id]{scroll-margin-top:80px}
+@media (max-width:620px){section[id]{scroll-margin-top:124px}}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(1.8rem,3.6vw,2.6rem);line-height:1.15;margin:0 0 8px;text-wrap:balance}
+.sub{color:var(--grey);margin:0 0 28px;max-width:60ch}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cat{display:flex;flex-direction:column;gap:12px;align-items:flex-start;text-align:start;padding:22px;border:1px solid var(--line);border-radius:var(--r);background:#fff;cursor:pointer;font:inherit;color:inherit;transition:border-color .2s,box-shadow .2s,transform .2s}
+.cat:hover,.cat[aria-pressed="true"]{border-color:var(--blue);box-shadow:0 12px 30px -18px rgba(20,104,184,.6);transform:translateY(-2px)}
+.cat .ic{width:52px;height:52px;border-radius:12px;background:var(--blue-l);color:var(--blue);display:grid;place-items:center}
+.cat .ic svg{width:28px;height:28px}
+.cat b{font-size:1.08rem}
+.cat small{color:var(--grey);font-size:.88rem}
+@media (max-width:1000px){.cats{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:860px){.cats{grid-template-columns:1fr 1fr}.cat[data-cat="all"]{grid-column:1/-1}}
+
+/* jobs */
+.jsearch{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);z-index:10;background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;display:grid;grid-template-columns:1.4fr 1fr;gap:10px;margin-bottom:18px;box-shadow:0 16px 30px -24px rgba(11,31,58,.5)}
+.jfield{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:10px;padding:10px 14px;min-width:0}
+.jfield svg{width:20px;height:20px;flex:none;color:var(--blue)}
+.jfield input,.jfield select{border:0;background:transparent;font:500 1rem var(--body);color:var(--ink);outline:none;width:100%;min-width:0}
+.jchips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.jchip{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:7px 14px;font:500 .9rem var(--body);cursor:pointer}
+.jchip[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+@media (max-width:620px){
+ .jsearch{grid-template-columns:1.25fr 1fr;gap:8px;padding:8px;border-radius:14px;top:calc(env(safe-area-inset-top,0px) + 112px)}
+ .jfield{padding:9px 10px;gap:6px}.jfield svg{width:17px;height:17px}.jfield input,.jfield select{font-size:.95rem}
+ .jchips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-8px;padding-inline:8px}.jchips::-webkit-scrollbar{display:none}
+ .jchip{white-space:nowrap;padding:6px 12px;font-size:.85rem}
+ .cats{gap:10px}.cat{flex-direction:row;align-items:center;padding:14px;gap:12px}.cat .ic{width:42px;height:42px}.cat .ic svg{width:22px;height:22px}.cat small{display:none}.cat b{font-size:.98rem}
+ .job{padding:16px}.job ul{grid-template-columns:1fr 1fr}.job ul li:last-child{grid-column:1/-1}
+ section{padding-block:48px}
+}
+.jobs-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+.count{margin:0;font-weight:600}
+.clear{border:0;background:none;color:var(--blue);font:600 .9rem var(--body);cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.job{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px;transition:box-shadow .2s,border-color .2s}
+.job:hover{border-color:#bcd3ee;box-shadow:0 14px 30px -20px rgba(11,31,58,.45)}
+.job .top{display:flex;justify-content:space-between;gap:8px;font-size:.78rem;font-weight:600}
+.job .ref{color:var(--blue);letter-spacing:.06em}
+.job .badge{background:var(--soft);color:var(--grey);padding:2px 8px;border-radius:6px}
+.jt{display:flex;align-items:center;gap:12px}
+.ji{width:48px;height:48px;flex:none;border-radius:14px;display:grid;place-items:center;background:var(--blue-l);color:var(--blue)}
+.ji svg{width:28px;height:28px}
+.ji-chef,.ji-serve,.ji-dish,.ji-knife{background:#fff1e6;color:#d2600f}
+.ji-coffee{background:#f6ede4;color:#8a5a2b}
+.ji-broom,.ji-bed{background:#e8f7ef;color:#178a4b}
+.ji-box,.ji-truck{background:#eef0ff;color:#4b53c9}
+.ji-flame,.ji-wrench,.ji-gear{background:#fff4d6;color:#b07800}
+.ji-brief,.ji-cash{background:var(--blue-l);color:var(--blue)}
+.urgent{background:#e5322d;color:#fff;padding:3px 10px;border-radius:6px;font-weight:700;letter-spacing:.02em;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(229,50,45,.45)}50%{box-shadow:0 0 0 6px rgba(229,50,45,0)}}
+.job.is-urgent{border-color:#f3b4b1;box-shadow:0 14px 30px -22px rgba(229,50,45,.6)}
+.job h3{margin:0;font-family:var(--display);font-size:1.22rem;font-weight:700;line-height:1.3}
+.job ul{list-style:none;margin:0;padding:0;display:grid;gap:6px;color:var(--grey);font-size:.94rem}
+.job li{display:flex;align-items:center;gap:8px}
+.job li svg{width:17px;height:17px;flex:none;color:var(--blue)}
+.job .pay{margin-top:auto;display:flex;align-items:baseline;gap:6px;font-family:var(--display)}
+.job .pay b{font-size:1.7rem;font-weight:800;color:var(--ink)}
+.job .pay small{font-family:var(--body);color:var(--grey);font-size:.85rem}
+.job .btn{width:100%}
+.empty{padding:30px;text-align:center;border:1px dashed var(--line);border-radius:var(--r);color:var(--grey)}
+.nojob{margin-top:28px;padding:24px;border-radius:var(--r);background:var(--soft);display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.nojob p{margin:0;font-weight:600;font-size:1.05rem}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--soft);border-radius:var(--r);padding:24px;position:relative}
+.steps li::before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:800;margin-bottom:14px}
+.steps b{display:block;font-size:1.1rem;margin-bottom:4px}
+.steps p{margin:0;color:var(--grey)}
+@media (max-width:760px){.steps{grid-template-columns:1fr}}
+
+/* employers */
+.band{background:var(--ink);color:#fff}
+.band .sub{color:#b8c7dc}
+.emp{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.emp ul{list-style:none;padding:0;margin:0 0 26px;display:grid;gap:12px}
+.emp li{display:flex;gap:12px;align-items:flex-start}
+.emp li svg{width:22px;height:22px;flex:none;color:#7cc0ff;margin-top:2px}
+.sectors{display:flex;flex-wrap:wrap;gap:8px}
+.sectors span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:6px 12px;border-radius:999px;font-size:.88rem}
+.emp-card{background:#fff;color:var(--ink);border-radius:18px;padding:28px}
+.emp-card h3{margin:0 0 6px;font-family:var(--display);font-size:1.4rem}
+.emp-card p{margin:0 0 18px;color:var(--grey)}
+.emp-card .btn{width:100%}
+@media (max-width:860px){.emp{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cbox{border:1px solid var(--line);border-radius:var(--r);padding:22px;display:flex;flex-direction:column;gap:10px}
+.cbox .lbl{font-size:.8rem;font-weight:600;color:var(--grey)}
+.phone{font-family:var(--display);font-weight:700;font-size:1.6rem;text-decoration:none;user-select:all}
+.crow,.socials{display:flex;flex-wrap:wrap;gap:8px}
+.mini{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:8px;padding:7px 12px;font:600 .85rem var(--body);cursor:pointer;text-decoration:none}
+.mini:hover{border-color:var(--blue);color:var(--blue)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+
+footer{background:var(--soft);padding-block:36px 110px;font-size:.88rem;color:var(--grey)}
+.flogo{width:140px;height:auto;margin-bottom:14px}
+.legal{display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:14px}
+details{border-top:1px solid var(--line);padding-block:12px}
+details summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details p{max-width:75ch}
+
+.fab{position:fixed;inset-inline-end:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;display:flex;align-items:center;gap:8px;background:var(--wa);color:#fff;padding:12px 18px 12px 14px;border-radius:999px;font-weight:600;text-decoration:none;box-shadow:0 12px 26px -10px rgba(0,0,0,.45)}
+.fab svg{width:26px;height:26px}
+@media (max-width:620px){.fab span{display:none}.fab{padding:14px}}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:8px 16px;border-radius:8px;font-size:.9rem;z-index:40}
+</style>
+
+</head>
+<body>
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="#top" aria-label="א.י.א"><img src="logo.webp" alt="א.י.א — כוח אדם, ניקיון, השמה" width="80" height="54"></a>
+    <nav class="nav"><a href="#jobs" data-t="navJobs"></a><a href="#how" data-t="howH"></a><a href="#contact" data-t="navContact"></a></nav>
+    <div class="langs" role="group" aria-label="Language">
+      <button type="button" data-lang="he" id="l-he">HE</button>
+      <button type="button" data-lang="ru" id="l-ru">RU</button>
+      <button type="button" data-lang="en" id="l-en">EN</button>
+    </div>
+    <div class="seg" role="group" aria-label="audience"><a href="#jobs" id="seg-seek" data-t="segSeek" aria-current="true"></a><a href="#employers" id="seg-emp" data-t="segEmp"></a></div>
+    <a class="btn btn-wa" data-wa="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="waShort"></span></a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <img src="hero.webp" alt="" width="900" height="900">
+    <div class="wrap">
+      <div class="hero-in">
+        <span class="tag" data-t="tag"></span>
+        <h1 data-t="h1v6" data-html></h1>
+        <p class="lead" data-t="leadv6"></p>
+        <form class="search" id="search" role="search">
+          <label for="q"><span data-t="sRole"></span><input id="q" type="search" autocomplete="off"></label>
+          <label for="city"><span data-t="sCity"></span><select id="city"></select></label>
+          <button class="btn btn-blue" type="submit" data-t="find"></button>
+        </form>
+        <button type="button" class="hint" id="hint" hidden></button>
+        <div class="or"><span data-t="orTxt"></span><a data-wa="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="orWa"></span></a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="trust">
+    <ul class="wrap">
+      <li><b class="num">2221</b><span data-t="t1"></span></li>
+      <li><b data-t="t2b"></b><span data-t="t2"></span></li>
+      <li><b class="num" id="openCount"></b><span data-t="t3"></span></li>
+      <li><b class="num">1:1</b><span data-t="t4"></span></li>
+    </ul>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2 data-t="catsH"></h2>
+      <p class="sub" data-t="catsSub"></p>
+      <div class="cats" id="cats"></div>
+    </div>
+  </section>
+
+  <section id="jobs" style="padding-top:0">
+    <div class="wrap">
+      <h2 data-t="jobsH"></h2>
+      <p class="sub" data-t="jobsSub"></p>
+      <div class="jsearch" role="search">
+        <label class="jfield" for="q2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q2" type="search" autocomplete="off"></label>
+        <label class="jfield jcity" for="city2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><select id="city2"></select></label>
+        <div class="jchips" id="jchips"></div>
+      </div>
+      <div class="jobs-bar"><p class="count num" id="count"></p><button class="clear" type="button" id="clear" data-t="clear" hidden></button></div>
+      <div class="grid" id="grid"></div>
+      <div class="nojob">
+        <p data-t="noJob"></p>
+        <a class="btn btn-wa" data-wa="nojob" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="noJobBtn"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="padding-top:0">
+    <div class="wrap">
+      <h2 data-t="howH"></h2>
+      <p class="sub" data-t="howSub"></p>
+      <ol class="steps">
+        <li><b data-t="s1b"></b><p data-t="s1p"></p></li>
+        <li><b data-t="s2b"></b><p data-t="s2p"></p></li>
+        <li><b data-t="s3b"></b><p data-t="s3p"></p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="employers">
+    <div class="wrap emp">
+      <div>
+        <h2 data-t="empH"></h2>
+        <p class="sub" data-t="empSub"></p>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-t="e1"></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-t="e2"></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-t="e3"></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span data-t="e4"></span></li>
+        </ul>
+        <div class="sectors" id="sectors"></div>
+      </div>
+      <div class="emp-card">
+        <h3 data-t="empCardH"></h3>
+        <p data-t="empCardP"></p>
+        <a class="btn btn-wa" data-wa="employer" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="empBtn"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2 data-t="contactH"></h2>
+      <p class="sub" data-t="contactSub"></p>
+      <div class="contact">
+        <div class="cbox">
+          <span class="lbl" data-t="c1"></span>
+          <a class="phone ltr num" href="tel:+972528888097">052-8888-097</a>
+          <div class="crow"><a class="mini" href="https://wa.me/972528888097" target="_blank" rel="noopener">WhatsApp</a><button class="mini" type="button" data-copy="052-8888-097" data-t="copy"></button></div>
+        </div>
+        <div class="cbox">
+          <span class="lbl" data-t="c2"></span>
+          <a class="phone ltr num" href="tel:+972528888956">052-8888-956</a>
+          <div class="crow"><a class="mini" href="https://wa.me/972528888956" target="_blank" rel="noopener">WhatsApp</a><button class="mini" type="button" data-copy="052-8888-956" data-t="copy"></button></div>
+        </div>
+        <div class="cbox">
+          <span class="lbl" data-t="c3"></span>
+          <div class="socials">
+            <a class="mini" href="https://www.facebook.com/aiagiyus" target="_blank" rel="noopener">Facebook</a>
+            <a class="mini" href="https://www.instagram.com/aiagiyus2024/" target="_blank" rel="noopener">Instagram</a>
+            <a class="mini" href="https://www.tiktok.com/@aiagiyus" target="_blank" rel="noopener">TikTok</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="flogo" src="logo.webp" alt="א.י.א" width="140" height="95">
+    <div class="legal">
+      <strong lang="he" dir="rtl" style="color:var(--ink)">א.י.א גיוס והשמה בע״מ</strong>
+      <span><bdi lang="he">ח.פ.</bdi> <span class="ltr num">516035466</span></span>
+      <span data-t="lic"></span>
+      <span>© <span class="num">2026</span></span>
+    </div>
+    <details id="access"><summary data-t="accH"></summary><p data-t="accP"></p></details>
+    <details id="privacy"><summary data-t="privH"></summary><p data-t="privP"></p></details>
+  </div>
+</footer>
+
+<a class="fab" data-wa="general" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg><span data-t="waShort"></span></a>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script>
+const WA="972528888097";
+let JOBS=[{"id": "AIA-256", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "", "t": {"he": "קצב/ית", "ru": "Мясник", "en": "Butcher"}, "c": {"he": "תל אביב", "ru": "Тель-Авив", "en": "Tel Aviv"}, "x": {"he": "ויותר לפי ניסיון · כולל שישי-שבת", "ru": "и выше по опыту · вкл. пт–сб", "en": "more with experience · incl. Fri–Sat"}, "u": true}, {"id": "AIA-257", "cat": "other", "n": 1, "pay": 40, "unit": "h", "hours": "15:00–23:00", "t": {"he": "אחראי/ת משמרת ערב", "ru": "Старший смены (вечер)", "en": "Evening shift manager"}, "c": {"he": "תל אביב", "ru": "Тель-Авив", "en": "Tel Aviv"}, "x": {"he": "עד 45 · כולל שישי-שבת", "ru": "до 45 · вкл. пт–сб", "en": "up to 45 · incl. Fri–Sat"}, "u": true}, {"id": "AIA-259", "cat": "kitchen", "n": 1, "pay": 47, "unit": "h", "hours": "", "t": {"he": "עובד/ת מעדנייה", "ru": "Работник отдела деликатесов", "en": "Deli counter worker"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": {"he": "כולל שישי-שבת · רוסית — יתרון", "ru": "вкл. пт–сб · русский — плюс", "en": "incl. Fri–Sat · Russian a plus"}, "u": true}, {"id": "AIA-262", "cat": "kitchen", "n": 1, "pay": 42, "unit": "h", "hours": "", "t": {"he": "עובד/ת מעדנייה", "ru": "Работник отдела деликатесов", "en": "Deli counter worker"}, "c": {"he": "קיסריה", "ru": "Кейсария", "en": "Caesarea"}, "x": {"he": "אפשר בלי שבת", "ru": "можно без субботы", "en": "Shabbat off possible"}, "u": true}, {"id": "AIA-265", "cat": "kitchen", "n": 1, "pay": 38, "unit": "h", "hours": "", "t": {"he": "עובד/ת מחלקת בשר", "ru": "Работник мясного отдела", "en": "Meat department worker"}, "c": {"he": "באר שבע", "ru": "Беэр-Шева", "en": "Be'er Sheva"}, "x": {"he": "עד 39 · אפשר בלי ניסיון", "ru": "до 39 · можно без опыта", "en": "up to 39 · no experience needed"}, "u": true}, {"id": "AIA-249", "cat": "other", "n": 2, "pay": 50, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובדים/ות עם ידע טכני להרכבת מתקני משחק", "ru": "Сборка детских игровых конструкций (техн. навыки)", "en": "Playground equipment assembly (technical)"}, "c": {"he": "קיסריה", "ru": "Кейсария", "en": "Caesarea"}, "x": {"he": "+ החזר נסיעות", "ru": "+ оплата проезда", "en": "+ travel paid"}, "u": true}, {"id": "AIA-244", "cat": "clean", "n": 1, "pay": 50, "unit": "h", "hours": "07:00–15:00", "t": {"he": "עובד/ת ניקיון", "ru": "Работник уборки", "en": "Cleaner"}, "c": {"he": "תל אביב", "ru": "Тель-Авив", "en": "Tel Aviv"}, "x": {"he": "מבנה בתוך פארק", "ru": "в помещении в парке", "en": "indoors, in a park"}, "u": true}, {"id": "AIA-208", "cat": "kitchen", "n": 2, "pay": 50, "unit": "h", "hours": "06:30–15:00", "t": {"he": "בריסטה מקצועי/ת לקפיטריה", "ru": "Бариста в кафетерий", "en": "Barista for a cafeteria"}, "c": {"he": "הרצליה", "ru": "Герцлия", "en": "Herzliya"}, "x": {"he": "מתקן ביטחוני", "ru": "охраняемый объект", "en": "security site"}, "u": true}, {"id": "AIA-275", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–15:00", "t": {"he": "טבח/ית", "ru": "Повар", "en": "Cook"}, "c": {"he": "ירושלים", "ru": "Иерусалим", "en": "Jerusalem"}, "x": {"he": "א׳–ה׳", "ru": "вс–чт", "en": "Sun–Thu"}, "u": false}, {"id": "AIA-272", "cat": "clean", "n": 1, "pay": 45, "unit": "h", "hours": "07:00–15:00", "t": {"he": "עובד/ת כללי/ת", "ru": "Разнорабочий", "en": "General worker"}, "c": {"he": "רמלה", "ru": "Рамле", "en": "Ramla"}, "x": {"he": "אפשר גם עד 19:00", "ru": "можно до 19:00", "en": "option until 19:00"}, "u": false}, {"id": "AIA-273", "cat": "clean", "n": 1, "pay": 45, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובד/ת כללי/ת", "ru": "Разнорабочий", "en": "General worker"}, "c": {"he": "חולון", "ru": "Холон", "en": "Holon"}, "x": null, "u": false}, {"id": "AIA-274", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "07:00–16:00", "t": {"he": "טבח/ית", "ru": "Повар", "en": "Cook"}, "c": {"he": "חולון", "ru": "Холон", "en": "Holon"}, "x": null, "u": false}, {"id": "AIA-267", "cat": "logistics", "n": 2, "pay": 38, "unit": "h", "hours": "07:00–16:00", "t": {"he": "מלקט/ת מוצרי פארמה וקוסמטיקה", "ru": "Комплектовщик аптечных товаров и косметики", "en": "Picker, pharma & cosmetics"}, "c": {"he": "עמק חפר", "ru": "Эмек-Хефер", "en": "Emek Hefer"}, "x": {"he": "+ פרמיות ללא הגבלה · הסעות מחדרה", "ru": "+ премии без ограничений · подвозка из Хадеры", "en": "+ unlimited bonuses · transport from Hadera"}, "u": false}, {"id": "AIA-268", "cat": "logistics", "n": 2, "pay": 38, "unit": "h", "hours": "07:00–16:00", "t": {"he": "מלקט/ת נפחי (קרטונים, ג׳ק ומסופון)", "ru": "Комплектовщик коробов (рохля и терминал)", "en": "Bulk picker (cartons, pallet jack)"}, "c": {"he": "עמק חפר", "ru": "Эмек-Хефер", "en": "Emek Hefer"}, "x": {"he": "+ פרמיה 1,000–1,200 ₪ · בלי ניסיון · הסעות מחדרה", "ru": "+ премия 1 000–1 200 ₪ · без опыта · подвозка из Хадеры", "en": "+ ₪1,000–1,200 bonus · no experience · transport from Hadera"}, "u": false}, {"id": "AIA-269", "cat": "logistics", "n": 2, "pay": 38, "unit": "h", "hours": "08:00–17:00", "t": {"he": "מלקט/ת קוסמטיקה יוקרתית", "ru": "Комплектовщик элитной косметики", "en": "Picker, luxury cosmetics"}, "c": {"he": "עמק חפר", "ru": "Эмек-Хефер", "en": "Emek Hefer"}, "x": {"he": "+ פרמיה · הסעה מנתניה (הלוך)", "ru": "+ премия · подвозка из Нетании (туда)", "en": "+ bonus · transport from Netanya (one way)"}, "u": false}, {"id": "AIA-270", "cat": "logistics", "n": 2, "pay": 38, "unit": "h", "hours": "12:00–21:00", "t": {"he": "מלקט/ת הזמנות אונליין — משמרת ערב", "ru": "Сборщик онлайн-заказов — вечерняя смена", "en": "Online order picker — evening"}, "c": {"he": "עמק חפר", "ru": "Эмек-Хефер", "en": "Emek Hefer"}, "x": {"he": "+ פרמיות עד 2,500 ₪ · הסעות מנתניה", "ru": "+ премии до 2 500 ₪ · подвозка из Нетании", "en": "+ bonuses up to ₪2,500 · transport from Netanya"}, "u": false}, {"id": "AIA-271", "cat": "logistics", "n": 2, "pay": 38, "unit": "h", "hours": "08:15–17:30", "t": {"he": "מלקט/ת הזמנות אונליין — משמרת בוקר", "ru": "Сборщик онлайн-заказов — утренняя смена", "en": "Online order picker — morning"}, "c": {"he": "עמק חפר", "ru": "Эмек-Хефер", "en": "Emek Hefer"}, "x": {"he": "+ פרמיות עד 2,500 ₪ · הסעות מנתניה", "ru": "+ премии до 2 500 ₪ · подвозка из Нетании", "en": "+ bonuses up to ₪2,500 · transport from Netanya"}, "u": false}, {"id": "AIA-254", "cat": "logistics", "n": 1, "pay": 38, "unit": "h", "hours": "", "t": {"he": "סדרן/ית מחלקת שתייה", "ru": "Выкладчик в отдел напитков", "en": "Shelf stocker, drinks department"}, "c": {"he": "אשקלון", "ru": "Ашкелон", "en": "Ashkelon"}, "x": {"he": "עד 40 · כולל שישי-שבת", "ru": "до 40 · вкл. пт–сб", "en": "up to 40 · incl. Fri–Sat"}, "u": false}, {"id": "AIA-255", "cat": "kitchen", "n": 1, "pay": 42, "unit": "h", "hours": "", "t": {"he": "עובד/ת מעדנייה", "ru": "Работник отдела деликатесов", "en": "Deli counter worker"}, "c": {"he": "תל אביב", "ru": "Тель-Авив", "en": "Tel Aviv"}, "x": {"he": "עד 43 · כולל שישי-שבת", "ru": "до 43 · вкл. пт–сб", "en": "up to 43 · incl. Fri–Sat"}, "u": false}, {"id": "AIA-258", "cat": "other", "n": 1, "pay": 40, "unit": "h", "hours": "", "t": {"he": "קופאי/ת", "ru": "Кассир", "en": "Cashier"}, "c": {"he": "תל אביב", "ru": "Тель-Авив", "en": "Tel Aviv"}, "x": {"he": "אפשר רק סופ\"ש", "ru": "можно только выходные", "en": "weekends only possible"}, "u": false}, {"id": "AIA-260", "cat": "logistics", "n": 1, "pay": 38, "unit": "h", "hours": "", "t": {"he": "מלקט/ת הזמנות וולט", "ru": "Сборщик заказов Wolt", "en": "Wolt order picker"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": {"he": "+ בונוסים · כולל שישי-שבת", "ru": "+ бонусы · вкл. пт–сб", "en": "+ bonuses · incl. Fri–Sat"}, "u": false}, {"id": "AIA-261", "cat": "other", "n": 1, "pay": 40, "unit": "h", "hours": "", "t": {"he": "קופאי/ת", "ru": "Кассир", "en": "Cashier"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": {"he": "עד 42 · כולל שישי-שבת", "ru": "до 42 · вкл. пт–сб", "en": "up to 42 · incl. Fri–Sat"}, "u": false}, {"id": "AIA-263", "cat": "clean", "n": 1, "pay": 40, "unit": "h", "hours": "15:00–24:00", "t": {"he": "עובד/ת כללי/ת (ערב)", "ru": "Разнорабочий (вечер)", "en": "General worker (evening)"}, "c": {"he": "חולון", "ru": "Холон", "en": "Holon"}, "x": {"he": "הסעה הביתה בלילה", "ru": "ночью развозка домой", "en": "night ride home"}, "u": false}, {"id": "AIA-264", "cat": "other", "n": 1, "pay": 40, "unit": "h", "hours": "15:00–24:00", "t": {"he": "אחראי/ת משמרת ערב", "ru": "Старший смены (вечер)", "en": "Evening shift manager"}, "c": {"he": "חולון", "ru": "Холон", "en": "Holon"}, "x": {"he": "עד 42 · הסעה בלילה", "ru": "до 42 · ночная развозка", "en": "up to 42 · night ride home"}, "u": false}, {"id": "AIA-266", "cat": "logistics", "n": 1, "pay": 37, "unit": "h", "hours": "", "t": {"he": "סדרן/ית ומלקט/ת", "ru": "Выкладчик и комплектовщик", "en": "Shelf stocker & picker"}, "c": {"he": "באר שבע", "ru": "Беэр-Шева", "en": "Be'er Sheva"}, "x": {"he": "+ בונוסים · כולל שישי-שבת", "ru": "+ бонусы · вкл. пт–сб", "en": "+ bonuses · incl. Fri–Sat"}, "u": false}, {"id": "AIA-253", "cat": "kitchen", "n": 10, "pay": 45, "unit": "h", "hours": "", "t": {"he": "מלצרים/ות לאירועים", "ru": "Официанты на мероприятия", "en": "Event waiters"}, "c": {"he": "נתניה, חדרה, אור עקיבא, פרדס חנה, זכרון יעקב", "ru": "Нетания, Хадера, Ор-Акива, Пардес-Хана, Зихрон-Яаков", "en": "Netanya, Hadera, Or Akiva, Pardes Hanna, Zichron Ya'akov"}, "cs": [{"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, {"he": "חדרה", "ru": "Хадера", "en": "Hadera"}, {"he": "אור עקיבא", "ru": "Ор-Акива", "en": "Or Akiva"}, {"he": "פרדס חנה", "ru": "Пардес-Хана", "en": "Pardes Hanna"}, {"he": "זכרון יעקב", "ru": "Зихрон-Яаков", "en": "Zichron Ya'akov"}], "x": {"he": "עד 50 · יש הסעות", "ru": "до 50 · есть подвозка", "en": "up to 50 · transport provided"}, "u": false}, {"id": "AIA-252", "cat": "logistics", "n": 2, "pay": 45, "unit": "h", "hours": "08:00–17:00", "t": {"he": "עובדי/ות מחסן מזון", "ru": "Работники продуктового склада", "en": "Food warehouse workers"}, "c": {"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, "x": null, "u": false}, {"id": "AIA-251", "cat": "other", "n": 1, "pay": 42, "unit": "h", "hours": "06:30–17:00", "t": {"he": "עובד/ת הרכבת ארונות כיבוי אש (ידע טכני)", "ru": "Сборка пожарных щитов (техн. навыки)", "en": "Fire cabinet assembly (technical)"}, "c": {"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, "x": {"he": "הסעה מנתניה", "ru": "подвозка из Нетании", "en": "transport from Netanya"}, "u": false}, {"id": "AIA-250", "cat": "logistics", "n": 2, "pay": 45, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובדי/ות מחסן שוקולד", "ru": "Работники склада шоколада", "en": "Chocolate warehouse workers"}, "c": {"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, "x": null, "u": false}, {"id": "AIA-248", "cat": "clean", "n": 4, "pay": 45, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובדי/ות ניקיון במלון", "ru": "Работники уборки в отель", "en": "Hotel cleaners"}, "c": {"he": "מודיעין", "ru": "Модиин", "en": "Modi'in"}, "x": {"he": "+ מגורים 1,000 ₪ לחודש", "ru": "+ проживание 1 000 ₪/мес", "en": "+ housing ₪1,000/mo"}, "u": false}, {"id": "AIA-247", "cat": "other", "n": 2, "pay": 40, "unit": "h", "hours": "", "t": {"he": "קופאים/ות", "ru": "Кассиры", "en": "Cashiers"}, "c": {"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, "x": {"he": "משמרות כולל שישי", "ru": "сменами, включая пятницу", "en": "shifts incl. Friday"}, "u": false}, {"id": "AIA-246", "cat": "clean", "n": 1, "pay": 50, "unit": "h", "hours": "07:00–16:00", "t": {"he": "מפעיל/ת מכונה במפעל", "ru": "Оператор станка на фабрике", "en": "Factory machine operator"}, "c": {"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, "x": {"he": "החזר נסיעות", "ru": "оплата проезда", "en": "travel paid"}, "u": false}, {"id": "AIA-245", "cat": "other", "n": 2, "pay": 55, "unit": "h", "hours": "08:00–17:00", "t": {"he": "רתכים/ות ועוזרי/ות רתך", "ru": "Сварщики и помощники сварщиков", "en": "Welders & welder assistants"}, "c": {"he": "חדרה", "ru": "Хадера", "en": "Hadera"}, "x": {"he": "עד 60", "ru": "до 60", "en": "up to 60"}, "u": false}, {"id": "AIA-228", "cat": "kitchen", "n": 1, "pay": 43, "unit": "h", "hours": "06:00–16:00", "t": {"he": "עובד/ת הגשה וקופה", "ru": "Раздача и касса", "en": "Serving & cashier"}, "c": {"he": "אשדוד", "ru": "Ашдод", "en": "Ashdod"}, "x": null, "u": false}, {"id": "AIA-241", "cat": "other", "n": 1, "pay": 10000, "unit": "m", "hours": "", "t": {"he": "פקיד/ה (הנהלת חשבונות ורכש)", "ru": "Офисный сотрудник (бухгалтерия и закупки)", "en": "Office clerk (bookkeeping & purchasing)"}, "c": {"he": "מודיעין", "ru": "Модиин", "en": "Modi'in"}, "x": {"he": "עד 12,000", "ru": "до 12 000", "en": "up to 12,000"}, "u": false}, {"id": "AIA-242", "cat": "other", "n": 1, "pay": null, "unit": "m", "hours": "", "t": {"he": "איש/אשת שטח (עברית ורוסית)", "ru": "Полевой сотрудник (иврит и русский)", "en": "Field coordinator (Hebrew & Russian)"}, "c": {"he": "יימסר בפנייה", "ru": "Уточним", "en": "On request"}, "x": null, "u": false}, {"id": "AIA-243", "cat": "other", "n": 1, "pay": 450, "unit": "d", "hours": "", "t": {"he": "עובד/ת התקנת מערכות אוורור במשרדים", "ru": "Монтаж вентиляции в офисах", "en": "Office ventilation installer"}, "c": {"he": "נתניה", "ru": "Нетания", "en": "Netanya"}, "x": {"he": "הסעה מנתניה", "ru": "подвозка из Нетании", "en": "transport from Netanya"}, "u": false}, {"id": "AIA-236", "cat": "kitchen", "n": 1, "pay": 60, "unit": "h", "hours": "06:00–17:00", "t": {"he": "טבח/ית", "ru": "Повар", "en": "Cook"}, "c": {"he": "חיפה", "ru": "Хайфа", "en": "Haifa"}, "x": null, "u": false}, {"id": "AIA-237", "cat": "kitchen", "n": 1, "pay": 55, "unit": "h", "hours": "06:00–17:00", "t": {"he": "עוזר/ת טבח", "ru": "Помощник повара", "en": "Kitchen assistant"}, "c": {"he": "חיפה", "ru": "Хайфа", "en": "Haifa"}, "x": null, "u": false}, {"id": "AIA-238", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "10:00–17:00", "t": {"he": "עובד/ת דלפק ופלנצ'ה", "ru": "Работник раздачи и планчи", "en": "Counter & plancha worker"}, "c": {"he": "פתח תקווה", "ru": "Петах-Тиква", "en": "Petah Tikva"}, "x": {"he": "מתאים גם עם ניסיון כעוזר/ת טבח", "ru": "подойдёт опыт помощника повара", "en": "kitchen-assistant experience welcome"}, "u": false}, {"id": "AIA-239", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "07:30–16:00", "t": {"he": "בריסטה", "ru": "Бариста", "en": "Barista"}, "c": {"he": "תל אביב", "ru": "Тель-Авив", "en": "Tel Aviv"}, "x": null, "u": false}, {"id": "AIA-240", "cat": "kitchen", "n": 1, "pay": 12000, "unit": "m", "hours": "06:00–15:00", "t": {"he": "מנהל/ת תחנה במטבח", "ru": "Руководитель кухонной станции", "en": "Kitchen station manager"}, "c": {"he": "ראשון לציון", "ru": "Ришон-ле-Цион", "en": "Rishon LeZion"}, "x": {"he": "עד 13,000", "ru": "до 13 000", "en": "up to 13,000"}, "u": false}, {"id": "AIA-201", "cat": "clean", "n": 1, "pay": 42, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובד/ת כללי/ת", "ru": "Разнорабочий", "en": "General worker"}, "c": {"he": "בית שמש", "ru": "Бейт-Шемеш", "en": "Beit Shemesh"}, "x": null, "u": false}, {"id": "AIA-202", "cat": "kitchen", "n": 2, "pay": 42, "unit": "h", "hours": "08:00–15:00", "t": {"he": "עובד/ת הגשה", "ru": "Работник раздачи", "en": "Food server"}, "c": {"he": "בית שמש", "ru": "Бейт-Шемеш", "en": "Beit Shemesh"}, "x": null, "u": false}, {"id": "AIA-203", "cat": "logistics", "n": 1, "pay": 45, "unit": "h", "hours": "06:00–14:00", "t": {"he": "נהג/ת עד 12 טון", "ru": "Водитель до 12 тонн", "en": "Driver (up to 12 t)"}, "c": {"he": "בית שמש", "ru": "Бейт-Шемеш", "en": "Beit Shemesh"}, "x": null, "u": false}, {"id": "AIA-204", "cat": "kitchen", "n": 1, "pay": null, "unit": "m", "hours": "05:30–15:30", "t": {"he": "סו שף/ית", "ru": "Су-шеф", "en": "Sous chef"}, "c": {"he": "בית שמש", "ru": "Бейт-Шемеш", "en": "Beit Shemesh"}, "x": null, "u": false}, {"id": "AIA-205", "cat": "kitchen", "n": 2, "pay": 50, "unit": "h", "hours": "05:30–15:30", "t": {"he": "טבחים/ות", "ru": "Повара", "en": "Cooks"}, "c": {"he": "בית שמש", "ru": "Бейт-Шемеш", "en": "Beit Shemesh"}, "x": null, "u": false}, {"id": "AIA-206", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:30–15:30", "t": {"he": "אחראי/ת חדר אוכל", "ru": "Старший по столовой", "en": "Dining room supervisor"}, "c": {"he": "רמת השרון", "ru": "Рамат-ха-Шарон", "en": "Ramat HaSharon"}, "x": null, "u": false}, {"id": "AIA-207", "cat": "clean", "n": 3, "pay": 45, "unit": "h", "hours": "06:30–15:30", "t": {"he": "עובדים/ות כלליים/ות (ניקיון ומדיח)", "ru": "Разнорабочие (уборка и мойка)", "en": "General workers (cleaning & dishes)"}, "c": {"he": "רמת השרון", "ru": "Рамат-ха-Шарон", "en": "Ramat HaSharon"}, "x": null, "u": false}, {"id": "AIA-209", "cat": "kitchen", "n": 2, "pay": 45, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובד/ת חלבייה", "ru": "Работник молочного цеха", "en": "Dairy kitchen worker"}, "c": {"he": "באר יעקב", "ru": "Беэр-Яаков", "en": "Be'er Ya'akov"}, "x": null, "u": false}, {"id": "AIA-210", "cat": "logistics", "n": 1, "pay": 10000, "unit": "m", "hours": "06:00–15:00", "t": {"he": "מחסנאי/ת", "ru": "Кладовщик", "en": "Storekeeper"}, "c": {"he": "ירושלים", "ru": "Иерусалим", "en": "Jerusalem"}, "x": null, "u": false}, {"id": "AIA-211", "cat": "kitchen", "n": 2, "pay": 48, "unit": "h", "hours": "05:30–15:30", "t": {"he": "עוזר/ת טבח", "ru": "Помощник повара", "en": "Kitchen assistant"}, "c": {"he": "ירושלים", "ru": "Иерусалим", "en": "Jerusalem"}, "x": null, "u": false}, {"id": "AIA-212", "cat": "kitchen", "n": 1, "pay": 60, "unit": "h", "hours": "12:00–08:00", "t": {"he": "טבח/ית לילה עם ידע קולינרי", "ru": "Ночной повар с кулинарным опытом", "en": "Night cook with culinary skills"}, "c": {"he": "חדרה", "ru": "Хадера", "en": "Hadera"}, "x": null, "u": false}, {"id": "AIA-213", "cat": "kitchen", "n": 2, "pay": 50, "unit": "h", "hours": "07:00–15:00", "t": {"he": "טבח/ית מתחלף/ת", "ru": "Повар на замены", "en": "Relief cook"}, "c": {"he": "בית שמש", "ru": "Бейт-Шемеш", "en": "Beit Shemesh"}, "x": null, "u": false}, {"id": "AIA-214", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–15:00", "t": {"he": "טבח/ית סלטים", "ru": "Повар салатов", "en": "Salad cook"}, "c": {"he": "חדרה", "ru": "Хадера", "en": "Hadera"}, "x": null, "u": false}, {"id": "AIA-215", "cat": "kitchen", "n": 1, "pay": 45, "unit": "h", "hours": "06:00–15:00", "t": {"he": "עוזר/ת טבח במטבח חם", "ru": "Помощник повара, горячий цех", "en": "Kitchen assistant, hot line"}, "c": {"he": "חדרה", "ru": "Хадера", "en": "Hadera"}, "x": null, "u": false}, {"id": "AIA-216", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–15:00", "t": {"he": "טבח/ית למטבח חלבי", "ru": "Повар молочной кухни", "en": "Dairy kitchen cook"}, "c": {"he": "ירושלים", "ru": "Иерусалим", "en": "Jerusalem"}, "x": null, "u": false}, {"id": "AIA-217", "cat": "kitchen", "n": 1, "pay": 40, "unit": "h", "hours": "06:00–15:00", "t": {"he": "עובד/ת מדיח", "ru": "Посудомойщик", "en": "Dishwasher"}, "c": {"he": "חיפה", "ru": "Хайфа", "en": "Haifa"}, "x": null, "u": false}, {"id": "AIA-218", "cat": "clean", "n": 1, "pay": 40, "unit": "h", "hours": "05:30–16:00", "t": {"he": "עובד/ת כללי/ת", "ru": "Разнорабочий", "en": "General worker"}, "c": {"he": "חיפה", "ru": "Хайфа", "en": "Haifa"}, "x": null, "u": false}, {"id": "AIA-219", "cat": "kitchen", "n": 1, "pay": 40, "unit": "h", "hours": "05:30–16:00", "t": {"he": "עובד/ת קפיטריה", "ru": "Работник кафетерия", "en": "Cafeteria worker"}, "c": {"he": "חיפה", "ru": "Хайфа", "en": "Haifa"}, "x": null, "u": false}, {"id": "AIA-220", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–11:00", "t": {"he": "בריסטה מקצועי/ת לקפיטריה", "ru": "Бариста в кафетерий", "en": "Barista for a cafeteria"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": null, "u": false}, {"id": "AIA-221", "cat": "clean", "n": 1, "pay": 45, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובד/ת כללי/ת", "ru": "Разнорабочий", "en": "General worker"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": null, "u": false}, {"id": "AIA-222", "cat": "kitchen", "n": 1, "pay": 45, "unit": "h", "hours": "07:00–16:00", "t": {"he": "עובד/ת לסטקייה", "ru": "Работник стейк-бара", "en": "Steakhouse worker"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": null, "u": false}, {"id": "AIA-223", "cat": "kitchen", "n": 1, "pay": 55, "unit": "h", "hours": "05:30–14:30", "t": {"he": "קצב/ית", "ru": "Мясник", "en": "Butcher"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": null, "u": false}, {"id": "AIA-224", "cat": "kitchen", "n": 2, "pay": 60, "unit": "h", "hours": "05:30–14:30", "t": {"he": "טבחים/ות", "ru": "Повара", "en": "Cooks"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": null, "u": false}, {"id": "AIA-225", "cat": "kitchen", "n": 5, "pay": 50, "unit": "h", "hours": "06:00–15:00", "t": {"he": "עובד/ת הגשה", "ru": "Работник раздачи", "en": "Food server"}, "c": {"he": "רחובות", "ru": "Реховот", "en": "Rehovot"}, "x": null, "u": false}, {"id": "AIA-226", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "08:00–16:00", "t": {"he": "אחראי/ת חדר אוכל", "ru": "Старший по столовой", "en": "Dining room supervisor"}, "c": {"he": "אשדוד", "ru": "Ашдод", "en": "Ashdod"}, "x": null, "u": false}, {"id": "AIA-227", "cat": "clean", "n": 2, "pay": 42, "unit": "h", "hours": "08:00–16:00", "t": {"he": "עובד/ת ניקיון", "ru": "Работник уборки", "en": "Cleaner"}, "c": {"he": "אשדוד", "ru": "Ашдод", "en": "Ashdod"}, "x": null, "u": false}, {"id": "AIA-229", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–16:00", "t": {"he": "מנהל/ת חלבייה", "ru": "Заведующий молочным цехом", "en": "Dairy kitchen manager"}, "c": {"he": "אשדוד", "ru": "Ашдод", "en": "Ashdod"}, "x": null, "u": false}, {"id": "AIA-230", "cat": "clean", "n": 4, "pay": 45, "unit": "h", "hours": "06:00–15:00", "t": {"he": "עובד/ת כללי/ת למשמרת בוקר", "ru": "Разнорабочий, утренняя смена", "en": "General worker, morning shift"}, "c": {"he": "ירושלים", "ru": "Иерусалим", "en": "Jerusalem"}, "x": null, "u": false}, {"id": "AIA-231", "cat": "kitchen", "n": 1, "pay": 15000, "unit": "m", "hours": "06:00–15:00", "t": {"he": "שף/ית מנהל/ת", "ru": "Шеф-менеджер", "en": "Executive chef"}, "c": {"he": "כפר סבא", "ru": "Кфар-Саба", "en": "Kfar Saba"}, "x": null, "u": false}, {"id": "AIA-232", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–15:00", "t": {"he": "בריסטה + הכנת כריכים ומכירה", "ru": "Бариста + сэндвичи и продажа", "en": "Barista + sandwiches & sales"}, "c": {"he": "מודיעין", "ru": "Модиин", "en": "Modi'in"}, "x": null, "u": false}, {"id": "AIA-233", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:15–16:00", "t": {"he": "עוזר/ת טבח", "ru": "Помощник повара", "en": "Kitchen assistant"}, "c": {"he": "מודיעין", "ru": "Модиин", "en": "Modi'in"}, "x": null, "u": false}, {"id": "AIA-234", "cat": "kitchen", "n": 1, "pay": 50, "unit": "h", "hours": "06:00–15:00", "t": {"he": "עובד/ת מדיח", "ru": "Посудомойщик", "en": "Dishwasher"}, "c": {"he": "בנימינה", "ru": "Биньямина", "en": "Binyamina"}, "x": null, "u": false}, {"id": "AIA-235", "cat": "logistics", "n": 2, "pay": 12000, "unit": "m", "hours": "03:00–12:00", "t": {"he": "נהג/ת עד 12 טון", "ru": "Водитель до 12 тонн", "en": "Driver (up to 12 t)"}, "c": {"he": "יימסר בפנייה", "ru": "Уточним", "en": "On request"}, "x": null, "u": false}];
+const I={
+ money:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/></svg>',
+ users:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5a3 3 0 0 1 0 6M21 20c0-2.6-1.7-4.8-4-5.6"/></svg>',
+ kitchen:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 13a6 6 0 0 1 12 0z"/><path d="M4 13h16M12 7V5M8 17h8v2H8z"/></svg>',
+ logistics:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>',
+ clean:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3l-4 9M7 12h10l2 9H5z"/><path d="M9 16v3M12 16v3M15 16v3"/></svg>',
+ other:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/></svg>',
+ all:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>',
+ pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
+ clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+ wa:'<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>'
+};
+const T={
+he:{dir:"rtl",brand:"א.י.א גיוס והשמה",waShort:"וואטסאפ",waLong:"שלחו הודעה בוואטסאפ",eyebrow:"גיוס והשמה · נתניה · כל הארץ",
+ h1:"העבודה הבאה שלכם<br>במרחק <em>הודעה אחת</em>",lead:"בוחרים משרה, לוחצים על הכפתור ושולחים לנו הודעה בוואטסאפ. אנחנו חוזרים אליכם, מסבירים את התנאים ומלווים עד יום העבודה הראשון.",
+ seeJobs:"למשרות הפתוחות",f1:"רישיון קבלן כוח אדם מס׳ 2221",f2:"מענה מהיר בוואטסאפ",f3:"ליווי אישי עד היום הראשון",
+ howH:"איך זה עובד",howSub:"בלי טפסים ובלי קורות חיים. אפשר להתחיל מהודעה קצרה.",
+ s1b:"בוחרים משרה",s1p:"מסננים לפי תחום ועיר ומוצאים משרה שמתאימה לכם.",
+ s2b:"שולחים הודעה",s2p:"הכפתור פותח וואטסאפ עם הודעה מוכנה, כולל מספר המשרה.",
+ s3b:"מתאמים ראיון",s3p:"אנחנו חוזרים אליכם, מסבירים את התנאים ומתאמים ראיון.",
+ jobsH:"משרות פתוחות",jobsSub:"בכל משרה מופיעים מראש השכר, השעות והעיר. המשרות מיועדות לנשים ולגברים כאחד.",all:"הכול",kitchen:"מטבח והסעדה",logistics:"לוגיסטיקה ומחסן",clean:"ניקיון וייצור",
+ city:"עיר",allCities:"כל הערים",count:n=>n===1?"משרה אחת":`${n} משרות`,open:n=>n>1?`${n} תקנים`:"תקן אחד",perH:"לשעה",perM:"לחודש",apply:"פנייה בוואטסאפ",
+ noJob:"לא מצאתם משרה מתאימה? כתבו לנו מה אתם מחפשים ובאיזה אזור.",noJobBtn:"כתבו לנו",
+ empEyebrow:"למעסיקים",empH:"צריכים עובדים? נמצא אותם בשבילכם",empSub:"אנחנו מגייסים לסניפים, לאתרי עבודה ולמשמרות בכל הארץ, בהתאם לדרישות של כל תפקיד.",
+ e1:"גיוס מהיר לתפקידים קבועים ולמשמרות",e2:"התאמה לפי אתר, תפקיד ושעות",e3:"ליווי והחלפה גם אחרי הקליטה",e4:"קבלן כוח אדם מורשה, רישיון מס׳ 2221",
+ empBtn:"דברו איתנו על גיוס",sectors:["קייטרינג והסעדה","מטבחים מוסדיים","לוגיסטיקה ומחסנים","ניקיון","ייצור ומפעלים","שירות ומכירות"],
+ contactH:"צרו קשר",contactSub:"הכי מהיר בוואטסאפ. אפשר גם להתקשר.",c1:"גיוס עובדים",c2:"קו נוסף",c3:"עקבו אחרינו",copy:"העתקה",copied:"המספר הועתק",
+ lic:"רישיון קבלן כוח אדם מס׳ 2221",accH:"הצהרת נגישות",accP:"אנו פועלים להנגיש את האתר לכלל המשתמשים בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות. האתר תומך בניווט מקלדת ובמצב כהה. נתקלתם בבעיית נגישות? כתבו לנו בוואטסאפ למספר 052-8888-097 ונטפל בה.",
+ privH:"מדיניות פרטיות",privP:"האתר אינו אוסף פרטים אישיים ואינו כולל טפסים. פרטים שתשלחו לנו בוואטסאפ ישמשו רק לצורך התאמת משרה וקשר איתכם, ולא יועברו לצד שלישי ללא הסכמתכם, למעט למעסיק שאליו תבקשו להגיש מועמדות.",
+ msgGeneral:"שלום, אני מחפש/ת עבודה ואשמח לפרטים.",msgNo:"שלום, לא מצאתי באתר משרה מתאימה.\nתחום: …\nאזור: …",
+ msgEmp:"שלום, אני מעסיק/ה ומחפש/ת עובדים.\nתחום: …\nעיר: …\nמספר עובדים: …",
+ msgJob:j=>`שלום, אני מעוניין/ת במשרה ${j.id}: ${j.t.he}, ${j.c.he}. אשמח לפרטים.`},
+ru:{dir:"ltr",brand:"A.I.A — подбор персонала",waShort:"WhatsApp",waLong:"Написать в WhatsApp",eyebrow:"Подбор персонала · Нетания · вся страна",
+ h1:"До новой работы —<br><em>одно сообщение</em>",lead:"Выберите вакансию, нажмите кнопку и напишите нам в WhatsApp. Мы перезвоним, объясним условия и будем на связи до первого рабочего дня.",
+ seeJobs:"Смотреть вакансии",f1:"Лицензия подрядчика по трудоустройству № 2221",f2:"Быстрый ответ в WhatsApp",f3:"Сопровождение до первого дня",
+ howH:"Как это работает",howSub:"Без анкет и резюме. Можно начать с короткого сообщения.",
+ s1b:"Выбираете вакансию",s1p:"Фильтр по сфере и городу поможет найти подходящую.",
+ s2b:"Пишете нам",s2p:"Кнопка открывает WhatsApp с готовым сообщением и номером вакансии.",
+ s3b:"Договариваемся о собеседовании",s3p:"Мы перезваниваем, рассказываем об условиях и назначаем встречу.",
+ jobsH:"Открытые вакансии",jobsSub:"Зарплата, часы и город указаны сразу. Вакансии открыты для женщин и мужчин.",all:"Все",kitchen:"Кухня и кейтеринг",logistics:"Логистика и склад",clean:"Уборка и производство",
+ city:"Город",allCities:"Все города",count:n=>`Вакансий: ${n}`,open:n=>n===1?"1 место":(n%10>=2&&n%10<=4&&(n%100<10||n%100>=20))?`${n} места`:`${n} мест`,perH:"в час",perM:"в месяц",apply:"Откликнуться в WhatsApp",
+ noJob:"Не нашли подходящее? Напишите, что ищете и в каком районе.",noJobBtn:"Написать нам",
+ empEyebrow:"Работодателям",empH:"Нужны сотрудники? Найдём",empSub:"Набираем персонал на объекты и смены по всей стране с учётом требований к каждой должности.",
+ e1:"Быстрый набор на постоянные места и смены",e2:"Подбор под объект, должность и график",e3:"Сопровождение и замена после выхода",e4:"Лицензированное агентство, лицензия подрядчика № 2221",
+ empBtn:"Обсудить подбор",sectors:["Кейтеринг и питание","Кухни учреждений и предприятий","Логистика и склады","Уборка","Производство","Сервис и продажи"],
+ contactH:"Контакты",contactSub:"Быстрее всего — в WhatsApp. Можно и позвонить.",c1:"Подбор персонала",c2:"Дополнительная линия",c3:"Мы в соцсетях",copy:"Скопировать",copied:"Номер скопирован",
+ lic:"Лицензия подрядчика по трудоустройству № 2221",accH:"Заявление о доступности",accP:"Мы стараемся сделать сайт доступным для всех пользователей в соответствии с израильскими правилами о равных правах людей с инвалидностью. Сайт поддерживает навигацию с клавиатуры и тёмную тему. Если столкнулись с проблемой доступности, напишите в WhatsApp на 052-8888-097.",
+ privH:"Политика конфиденциальности",privP:"Сайт не собирает личные данные и не содержит форм. Данные, которые вы отправите нам в WhatsApp, используются только для подбора вакансии и связи с вами и не передаются третьим лицам без вашего согласия, кроме работодателя, к которому вы откликаетесь.",
+ msgGeneral:"Здравствуйте, ищу работу, хочу узнать подробности.",msgNo:"Здравствуйте, на сайте не нашёл(ла) подходящей вакансии.\nСфера: …\nРайон: …",
+ msgEmp:"Здравствуйте, я работодатель, ищу сотрудников.\nСфера: …\nГород: …\nСколько человек: …",
+ msgJob:j=>`Здравствуйте, меня интересует вакансия ${j.id}: ${j.t.ru.toLowerCase()}, ${j.c.ru}. Расскажите подробнее.`},
+en:{dir:"ltr",brand:"A.I.A Recruitment",waShort:"WhatsApp",waLong:"Message us on WhatsApp",eyebrow:"Recruitment & placement · Netanya · nationwide",
+ h1:"Your next job is<br><em>one message</em> away",lead:"Pick a job, tap the button and send us a WhatsApp message. We call you back, explain the terms and stay with you until your first day.",
+ seeJobs:"See open jobs",f1:"Licensed agency, no. 2221",f2:"Fast replies on WhatsApp",f3:"Personal support to day one",
+ howH:"How it works",howSub:"No forms, no CV needed. A short message is enough to start.",
+ s1b:"Pick a job",s1p:"Filter by field and city to find one that fits.",
+ s2b:"Send a message",s2p:"The button opens WhatsApp with a ready message that includes the job number.",
+ s3b:"Book an interview",s3p:"We call you back, go over the terms and set up an interview.",
+ jobsH:"Open jobs",jobsSub:"Pay, hours and city are listed up front. All jobs are open to all genders.",all:"All",kitchen:"Kitchen & catering",logistics:"Logistics & warehouse",clean:"Cleaning & production",
+ city:"City",allCities:"All cities",count:n=>n===1?"1 job":`${n} jobs`,open:n=>n>1?`${n} openings`:"1 opening",perH:"per hour",perM:"per month",apply:"Apply on WhatsApp",
+ noJob:"Didn't find the right job? Tell us what you're looking for and where.",noJobBtn:"Message us",
+ empEyebrow:"For employers",empH:"Need staff? We'll find them",empSub:"We recruit for sites and shifts across Israel, matched to each role's requirements.",
+ e1:"Fast hiring for permanent roles and shifts",e2:"Matching by site, role and hours",e3:"Support and replacement after hiring",e4:"Licensed manpower contractor, license no. 2221",
+ empBtn:"Talk to us about hiring",sectors:["Catering & food service","Institutional kitchens","Logistics & warehouses","Cleaning","Production","Service & sales"],
+ contactH:"Contact",contactSub:"WhatsApp is fastest. You can also call.",c1:"Recruitment",c2:"Second line",c3:"Follow us",copy:"Copy",copied:"Number copied",
+ lic:"Manpower contractor license no. 2221",accH:"Accessibility statement",accP:"We work to make this site accessible to all users in line with Israel's equal rights regulations for people with disabilities. The site supports keyboard navigation and dark mode. If you run into an accessibility problem, message us on WhatsApp at 052-8888-097.",
+ privH:"Privacy policy",privP:"This site does not collect personal data and has no forms. Details you send us on WhatsApp are used only to match you with a job and contact you, and are not shared with third parties without your consent, except the employer you apply to.",
+ msgGeneral:"Hello, I'm looking for work and would like more details.",msgNo:"Hello, I didn't find a suitable job on the site.\nField: …\nArea: …",
+ msgEmp:"Hello, I'm an employer looking for staff.\nField: …\nCity: …\nHow many: …",
+ msgJob:j=>`Hello, I'm interested in job ${j.id}: ${j.t.en}, ${j.c.en}. Please send details.`}
+};
+const EX={"he": {"navJobs": "משרות", "navEmp": "למעסיקים", "navContact": "צור קשר", "empLink": "למעסיקים", "tag": "משרות פתוחות בכל הארץ", "h1v6": "מוצאים עבודה.<br><em>שולחים הודעה.</em><br>מתחילים לעבוד.", "leadv6": "משרות במטבחים, בלוגיסטיקה, בניקיון ובמפעלים בכל הארץ. חפשו משרה ושלחו לנו הודעה בוואטסאפ, בלי טפסים ובלי קורות חיים.", "sRole": "איזו עבודה?", "sRolePh": "למשל: טבח, מחסנאי, ניקיון", "sCity": "איפה?", "find": "חיפוש משרה", "orTxt": "או בלי לחפש:", "orWa": "כתבו לנו בוואטסאפ", "t1": "רישיון קבלן כוח אדם", "t2b": "WhatsApp", "t2": "פנייה בהודעה אחת", "t3": "מקומות עבודה פנויים", "t4b": "1:1", "t4": "ליווי עד היום הראשון", "catsH": "במה תרצו לעבוד?", "catsSub": "בחרו תחום ונציג לכם את המשרות המתאימות.", "catK": "מטבח והסעדה", "catKs": "טבחים, עוזרי טבח, הגשה", "catL": "לוגיסטיקה ומחסן", "catLs": "מחסנאים, ליקוט, הפצה", "catC": "ניקיון וייצור", "catCs": "ניקיון, מפעלים, עבודה כללית", "catA": "כל המשרות", "catAs": "כל התחומים וכל הערים", "empty": "לא נמצאו משרות לפי החיפוש. נסו עיר או תחום אחר, או כתבו לנו.", "clear": "ניקוי חיפוש", "empCardH": "צריכים עובדים?", "empCardP": "ספרו לנו מה התפקיד, איפה וכמה עובדים, ונחזור אליכם."}, "ru": {"navJobs": "Вакансии", "navEmp": "Работодателям", "navContact": "Контакты", "empLink": "Работодателям", "tag": "Вакансии по всей стране", "h1v6": "Работа рядом.<br><em>Одно сообщение в WhatsApp.</em><br>И вы на смене.", "leadv6": "Вакансии на кухнях, в логистике, уборке и на производстве по всей стране. Найдите вакансию и напишите нам в WhatsApp, без анкет и резюме.", "sRole": "Какая работа?", "sRolePh": "Например: повар, кладовщик", "sCity": "Где?", "find": "Найти вакансию", "orTxt": "Или без поиска:", "orWa": "напишите нам в WhatsApp", "t1": "Лицензия подрядчика", "t2b": "WhatsApp", "t2": "отклик одним сообщением", "t3": "открытых вакансий", "t4b": "1:1", "t4": "сопровождение до первого дня", "catsH": "Где хотите работать?", "catsSub": "Выберите сферу, и мы покажем подходящие вакансии.", "catK": "Кухня и кейтеринг", "catKs": "повара, помощники, раздача", "catL": "Логистика и склад", "catLs": "кладовщики, комплектовка", "catC": "Уборка и производство", "catCs": "уборка, заводы, разнорабочие", "catA": "Все вакансии", "catAs": "все сферы и города", "empty": "По запросу ничего не нашлось. Попробуйте другой город или сферу или напишите нам.", "clear": "Сбросить поиск", "empCardH": "Нужны сотрудники?", "empCardP": "Расскажите, какая должность, где и сколько человек, и мы свяжемся с вами."}, "en": {"navJobs": "Jobs", "navEmp": "Employers", "navContact": "Contact", "empLink": "For employers", "tag": "Open jobs across Israel", "h1v6": "Find a job.<br><em>Send a message.</em><br>Start working.", "leadv6": "Jobs in kitchens, logistics, cleaning and factories across Israel. Search for a job and message us on WhatsApp, no forms and no CV.", "sRole": "What job?", "sRolePh": "e.g. cook, warehouse, cleaning", "sCity": "Where?", "find": "Search jobs", "orTxt": "Or skip the search:", "orWa": "message us on WhatsApp", "t1": "Manpower contractor license", "t2b": "WhatsApp", "t2": "apply with one message", "t3": "open jobs right now", "t4b": "1:1", "t4": "support to day one", "catsH": "What would you like to do?", "catsSub": "Pick a field and we'll show matching jobs.", "catK": "Kitchen & catering", "catKs": "cooks, kitchen help, serving", "catL": "Logistics & warehouse", "catLs": "warehouse, picking, distribution", "catC": "Cleaning & production", "catCs": "cleaning, factories, general work", "catA": "All jobs", "catAs": "every field and city", "empty": "No jobs match your search. Try another city or field, or message us.", "clear": "Clear search", "empCardH": "Need staff?", "empCardP": "Tell us the role, the location and how many people, and we'll get back to you."}};
+for(const k in EX)Object.assign(T[k],EX[k]);
+T.he.payInt="שכר נקבע בראיון";T.he.urgent="דחוף";T.ru.urgent="Срочно";T.en.urgent="Urgent";T.he.perD="ליום";T.ru.perD="в день";T.en.perD="per day";T.he.other="משרד, שטח וטכני";T.ru.other="Офис, техника и другое";T.en.other="Office, technical & other";T.he.catO="משרד, שטח וטכני";T.he.catOs="פקידות, עבודת שטח, התקנות";T.ru.catO="Офис, техника и другое";T.ru.catOs="офис, выезды, монтаж";T.en.catO="Office, technical & other";T.en.catOs="clerical, field work, installation";T.he.segSeek="מחפשים עבודה";T.he.segEmp="מעסיקים";T.ru.segSeek="Ищу работу";T.ru.segEmp="Работодателям";T.en.segSeek="Job seekers";T.en.segEmp="Employers";T.he.noCity=c=>`כרגע אין משרות כאלה ב${c}. הנה משרות מתאימות בערים אחרות:`;T.he.hint=n=>`נמצאו ${n} משרות · להצגה ↓`;T.ru.noCity=c=>`В городе ${c} таких вакансий сейчас нет. Вот подходящие в других городах:`;T.ru.hint=n=>`Найдено вакансий: ${n} · показать ↓`;T.en.noCity=c=>`No such jobs in ${c} right now. Here are matching jobs in other cities:`;T.en.hint=n=>`${n} jobs found · show ↓`;T.ru.payInt="Зарплата — по итогам собеседования";T.en.payInt="Pay set at interview";
+let lang="he",cat="all",city="",q="";
+try{const s=localStorage.getItem("aia-lang");if(s&&T[s])lang=s}catch(e){}
+const hq=(location.hash||"").slice(1);if(T[hq])lang=hq;
+const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+const fmt=n=>n.toLocaleString("en-US");
+const RI={
+ chef:'<path d="M7 18h10v3H7zM7 18v-4.5A4 4 0 0 1 6 6.2 4 4 0 0 1 12 4a4 4 0 0 1 6 2.2 4 4 0 0 1-1 7.3V18"/>',
+ coffee:'<path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5zM17 10h1.5a2.5 2.5 0 0 1 0 5H17M8 2.5c-.7.8-.7 1.7 0 2.5M12 2.5c-.7.8-.7 1.7 0 2.5"/>',
+ serve:'<path d="M3 17h18M5 17a7 7 0 0 1 14 0M12 8V6M10 6h4M4 20h16"/>',
+ broom:'<path d="M15 3l-4 8M8 11h7l3 10H5zM9 15v4M12 15v4M15 15v4"/>',
+ box:'<path d="M3 7l9-4 9 4v10l-9 4-9-4zM3 7l9 4 9-4M12 11v10"/>',
+ truck:'<path d="M2 6h11v10H2zM13 9h4l4 4v3h-8z"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>',
+ flame:'<path d="M12 21a6 6 0 0 0 6-6c0-4-3-6-4-10-2 2-3 4-3 6-1-1-1.5-2-1.5-3C7 10 6 12 6 15a6 6 0 0 0 6 6z"/>',
+ wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/>',
+ brief:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M3 13h18"/>',
+ cash:'<rect x="3" y="10" width="18" height="10" rx="2"/><path d="M6 10V5h12v5M8 14h2M14 14h2M8 17h8"/>',
+ dish:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2"/>',
+ knife:'<path d="M20 4L8 16l-3 1 1-3L18 2zM8 16l3 3-2 2-3-3"/>',
+ gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/>',
+ bed:'<path d="M3 18V7M3 13h18v5M21 18v-3a3 3 0 0 0-3-3h-7v6"/><circle cx="7" cy="11" r="2"/>',
+ people:'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5a3 3 0 0 1 0 6M21 20c0-2.6-1.7-4.8-4-5.6"/>'
+};
+function iconFor(j){const t=j.t.en.toLowerCase();
+ if(/hotel/.test(t))return"bed";if(/shift manager/.test(t))return"brief";if(/stocker|picker/.test(t))return"box";if(/meat|butcher/.test(t))return"knife";if(/deli/.test(t))return"serve";if(/barista|cafeteria/.test(t))return"coffee";if(/dish/.test(t))return"dish";if(/butcher/.test(t))return"knife";
+ if(/weld/.test(t))return"flame";if(/driver/.test(t))return"truck";if(/storekeeper|warehouse/.test(t))return"box";if(/cashier/.test(t))return"cash";
+ if(/operator/.test(t))return"gear";if(/install|assembl|technical/.test(t))return"wrench";if(/clerk|field|office/.test(t))return"brief";
+ if(/clean/.test(t))return"broom";if(/serv|counter|dining/.test(t))return"serve";if(/cook|chef|kitchen|dairy|steak|salad/.test(t))return"chef";return"people"}
+const svgI=k=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${RI[k]}</svg>`;
+function ticket(j,L){
+  const unit=j.unit==="h"?L.perH:j.unit==="d"?L.perD:L.perM;
+  const x=j.x?` · ${j.x[lang]}`:"";
+  return `<article class="job${j.u?" is-urgent":""}">
+   <div class="top"><span class="ref ltr num">${j.id}</span>${j.u?`<span class="urgent">${L.urgent}</span>`:`<span class="badge">${L[j.cat]}</span>`}</div>
+   <div class="jt"><span class="ji ji-${iconFor(j)}">${svgI(iconFor(j))}</span><h3>${j.t[lang]}${lang==="ru"?" (м/ж)":""}</h3></div>
+   <ul><li>${I.pin}${j.c[lang]}</li>${j.hours?`<li>${I.clock}<span class="ltr num">${j.hours}</span></li>`:""}<li>${I.users}${L.open(j.n)}</li></ul>
+   ${j.pay==null?`<div class="pay"><small style="font-size:1rem;font-weight:600;color:var(--ink)">${L.payInt}</small></div>`:`<div class="pay num"><b class="ltr">₪${fmt(j.pay)}</b><small>${unit}${x}</small></div>`}
+   <a class="btn btn-wa" href="${wa(L.msgJob(j))}" target="_blank" rel="noopener">${I.wa}<span>${L.apply}</span></a></article>`;
+}
+const norm=t=>t.toLowerCase().replace(/ё/g,"е").replace(/[ךםןףץ]/g,c=>({"ך":"כ","ם":"מ","ן":"נ","ף":"פ","ץ":"צ"})[c]).replace(/\(м\/ж\)/g,"").replace(/\/(ית|ת|ה|ות|ים|ית)/g,"").replace(/[\/\-–(),.+]/g," ").replace(/\s+/g," ").trim();
+const SYN=[["повар","повара","шеф","су шеф"],["טבח","טבחית","טבחים","שף"],["cook","chef"],["уборк","разнорабоч","ניקיון","כללי","clean","general"],["склад","кладов","מחסנ","warehouse","storekeeper"],["водител","נהג","driver"],["официант","раздач","הגשה","מלצר","server","waiter","serving"],["посуд","мойщ","מדיח","dish"],["бариста","בריסטה","barista","кафетер","קפיטריה","cafeteria"],["мясник","קצב","butcher"],["офис","бухгалт","פקיד","משרד","office","clerk"],["вентиляц","монтаж","установ","מתקין","התקנ","אוורור","install","ventilation"],["сварщ","свар","רתך","רתכ","ריתוך","weld","металл","מתכת","metal"],["оператор","станк","מפעיל","מכונ","operator","machine","завод","фабрик","מפעל","factory"],["касс","קופאי","קופה","cashier"],["деликатес","кулинар","מעדני","deli"],["выклад","сборщ","комплект","סדרן","ליקוט","מלקט","וולט","wolt","stocker","picker","מלקט","ליקוט","комплектов","косметик","קוסמטיקה","cosmetic"],["старший смен","старш","אחמ","אחראי משמרת","אחראית משמרת","shift manager"],["супермаркет","магазин","סופר","supermarket"],["отел","гостиниц","מלון","hotel"],["проживан","жиль","מגורים","housing"],["сборк","техни","הרכב","טכני","assembl","technical","пожар","щит","כיבוי","fire"]];
+function terms(q){const n=norm(q);if(!n)return[];const out=new Set([n]);for(const g of SYN){if(g.some(w=>n.includes(norm(w))||norm(w).includes(n)&&n.length>=3))g.forEach(w=>out.add(norm(w)))}return[...out]}
+const CS=j=>j.cs||[j.c];
+const hay=j=>norm(["he","ru","en"].map(l=>j.t[l]+" "+CS(j).map(c=>c[l]).join(" ")).join(" "));
+const ALLC=()=>{const m=new Map();JOBS.forEach(j=>CS(j).forEach(c=>{if(!m.has(c.he))m.set(c.he,c)}));m.delete("יימסר בפנייה");return m};
+function render(){
+  const L=T[lang];
+  document.documentElement.lang=lang;document.documentElement.dir=L.dir;
+  document.querySelectorAll("[data-t]").forEach(el=>{const v=L[el.dataset.t];if(typeof v==="string"){if(el.hasAttribute("data-html"))el.innerHTML=v;else el.textContent=v}});
+  document.querySelectorAll("[data-lang]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.lang===lang));
+  const msg={general:L.msgGeneral,nojob:L.msgNo,employer:L.msgEmp};
+  document.querySelectorAll("[data-wa]").forEach(a=>a.href=wa(msg[a.dataset.wa]));
+  document.getElementById("sectors").innerHTML=L.sectors.map(s=>`<span>${s}</span>`).join("");
+  const catDefs=[["kitchen","catK","catKs"],["logistics","catL","catLs"],["clean","catC","catCs"],["other","catO","catOs"],["all","catA","catAs"]];
+  document.getElementById("cats").innerHTML=catDefs.map(([c,a,b])=>`<button type="button" class="cat" data-cat="${c}" aria-pressed="${c===cat}"><span class="ic">${I[c]}</span><b>${L[a]}</b><small>${L[b]}</small></button>`).join("");
+  const CM=ALLC();const cities=[...CM.keys()].sort((a,b)=>CM.get(a)[lang].localeCompare(CM.get(b)[lang],lang));
+  const opts=`<option value="">${L.allCities}</option>`+cities.map(c=>`<option value="${c}" ${c===city?"selected":""}>${CM.get(c)[lang]}</option>`).join("");
+  document.getElementById("city2").innerHTML=opts;
+  const q2=document.getElementById("q2");q2.placeholder=L.sRolePh;if(document.activeElement!==q2)q2.value=q;
+  const qh=document.getElementById("q");if(document.activeElement!==qh)qh.value=q;
+  document.getElementById("jchips").innerHTML=catDefs.slice(4).concat(catDefs.slice(0,4)).map(([c,a])=>`<button type="button" class="jchip" data-cat="${c}" aria-pressed="${c===cat}">${L[a]}</button>`).join("");
+  const sel=document.getElementById("city");
+  sel.innerHTML=opts;
+  document.getElementById("q").placeholder=L.sRolePh;
+  document.getElementById("openCount").textContent=JOBS.reduce((s,j)=>s+j.n,0);
+  const tq=terms(q);
+  const okQ=j=>!tq.length||tq.some(t=>hay(j).includes(t));
+  let list=JOBS.filter(j=>(cat==="all"||j.cat===cat)&&(!city||CS(j).some(c=>c.he===city))&&okQ(j));
+  let note="";
+  if(!list.length&&city){const alt=JOBS.filter(j=>(cat==="all"||j.cat===cat)&&okQ(j));if(alt.length){const cj=CM.get(city);note=`<p class="note">${L.noCity(cj?cj[lang]:city)}</p>`;list=alt}}
+  const qq=q.trim();
+  const hint=document.getElementById("hint");if(hint){hint.hidden=!(qq||city);hint.textContent=L.hint(list.length)}
+  document.getElementById("count").textContent=L.count(list.length);
+  document.getElementById("clear").hidden=!(cat!=="all"||city||qq);
+  document.getElementById("grid").innerHTML=(note?`<div style="grid-column:1/-1">${note}</div>`:"")+(list.length?list.map(j=>ticket(j,L)).join(""):`<div class="empty">${L.empty}</div>`);
+}
+document.addEventListener("click",e=>{
+  const b=e.target.closest("[data-lang]");if(b){lang=b.dataset.lang;try{localStorage.setItem("aia-lang",lang)}catch(_){}render();return}
+  const c=e.target.closest("[data-cat]");if(c){cat=c.dataset.cat;render();const inJobs=!!c.closest("#jobs");document.querySelector(`#${inJobs?"jchips":"cats"} [data-cat="${cat}"]`)?.focus();if(!inJobs)document.getElementById("jobs").scrollIntoView({behavior:"smooth"});return}
+  const cp=e.target.closest("[data-copy]");if(cp){const n=cp.dataset.copy;const done=()=>{const t=document.getElementById("toast");t.textContent=T[lang].copied;t.hidden=false;setTimeout(()=>t.hidden=true,1600)};
+    const fb=()=>{const ta=document.createElement("textarea");ta.value=n;ta.style.position="fixed";ta.style.opacity="0";document.body.appendChild(ta);ta.select();try{document.execCommand("copy");done()}catch(_){}ta.remove()};navigator.clipboard?navigator.clipboard.writeText(n).then(done,fb):fb();}
+});
+document.getElementById("city").addEventListener("change",e=>{city=e.target.value;render()});
+document.getElementById("q").addEventListener("input",e=>{q=e.target.value;render()});
+document.getElementById("q2").addEventListener("input",e=>{q=e.target.value;render()});
+document.getElementById("city2").addEventListener("change",e=>{city=e.target.value;render()});
+document.getElementById("search").addEventListener("submit",e=>{e.preventDefault();q=document.getElementById("q").value;render();document.getElementById("jobs").scrollIntoView({behavior:"smooth"})});
+document.getElementById("hint").addEventListener("click",()=>document.getElementById("jobs").scrollIntoView({behavior:"smooth"}));
+document.getElementById("clear").addEventListener("click",()=>{cat="all";city="";q="";document.getElementById("q").value="";render()});
+function segSync(){const e=document.getElementById("employers").getBoundingClientRect();const onEmp=e.top<window.innerHeight*0.5&&e.bottom>120;document.getElementById("seg-emp").setAttribute("aria-current",onEmp);document.getElementById("seg-seek").setAttribute("aria-current",!onEmp)}
+window.addEventListener("scroll",segSync,{passive:true});
+render();segSync();
+
+/* Live jobs: read from the published Google Sheet; embedded list is the fallback. */
+const SHEET_CSV="__SHEET_CSV__";
+function parseCSV(t){const rows=[];let r=[],f="",q=false;for(let i=0;i<t.length;i++){const c=t[i];
+ if(q){if(c==='"'){if(t[i+1]==='"'){f+='"';i++}else q=false}else f+=c}
+ else if(c==='"')q=true;else if(c===','){r.push(f);f=""}else if(c==='\n'||c==='\r'){if(c==='\r'&&t[i+1]==='\n')i++;r.push(f);rows.push(r);r=[];f=""}else f+=c}
+ if(f!==""||r.length){r.push(f);rows.push(r)}return rows}
+const YES=v=>/^(yes|y|1|true|כן|да|v|✓|x)$/i.test(String(v||"").trim());
+function rowsToJobs(rows){const h=rows[0].map(x=>x.trim().toLowerCase());const g=(r,k)=>(r[h.indexOf(k)]||"").trim();
+ const out=[];for(const r of rows.slice(1)){if(!g(r,"id")||!g(r,"title_he"))continue;const act=g(r,"active");if(act&&!YES(act))continue;
+  const c={he:g(r,"city_he"),ru:g(r,"city_ru")||g(r,"city_he"),en:g(r,"city_en")||g(r,"city_he")};
+  const sp=l=>c[l].split(",").map(s=>s.trim()).filter(Boolean);
+  const j={id:g(r,"id"),cat:["kitchen","logistics","clean","other"].includes(g(r,"category"))?g(r,"category"):"other",n:parseInt(g(r,"count"))||1,
+   pay:g(r,"pay")===""||isNaN(+g(r,"pay"))?null:+g(r,"pay"),unit:["h","d","m"].includes(g(r,"unit"))?g(r,"unit"):"h",hours:g(r,"hours"),
+   t:{he:g(r,"title_he"),ru:g(r,"title_ru")||g(r,"title_he"),en:g(r,"title_en")||g(r,"title_he")},c,u:YES(g(r,"urgent"))};
+  if(sp("he").length>1&&sp("he").length===sp("ru").length&&sp("he").length===sp("en").length)j.cs=sp("he").map((x,i)=>({he:x,ru:sp("ru")[i],en:sp("en")[i]}));
+  if(g(r,"note_he"))j.x={he:g(r,"note_he"),ru:g(r,"note_ru")||g(r,"note_he"),en:g(r,"note_en")||g(r,"note_he")};
+  out.push(j)}
+ return out.filter(j=>j.u).concat(out.filter(j=>!j.u))}
+if(SHEET_CSV.startsWith("http"))fetch(SHEET_CSV,{cache:"no-store"}).then(r=>r.ok?r.text():Promise.reject()).then(t=>{const L=rowsToJobs(parseCSV(t));if(L.length){JOBS=L;render()}}).catch(()=>{});
+</script>
+
+</body>
+</html>
